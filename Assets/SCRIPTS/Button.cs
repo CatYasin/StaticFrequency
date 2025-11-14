@@ -13,5 +13,7 @@ public class Button : MonoBehaviour, IPressable
     public void Press()
     {
         OnPress.Invoke();
+        Debug.Log("AAAAAAAA");
+        
     }
 }

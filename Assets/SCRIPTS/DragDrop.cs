@@ -63,6 +63,7 @@ public class DragDrop : MonoBehaviour
             if (hit.collider.TryGetComponent(out IPressable com))
             {
                 com.Press();
+                return;
             }
 
 

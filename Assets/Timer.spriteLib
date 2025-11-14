@@ -59,6 +59,27 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: -617584104, guid: 7cedafac87089b64ab8a7eac3a34cf61, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 8
+  - m_Name: Book
+    m_Hash: 735513615
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: 0
+      m_Hash: 886824737
+      m_Sprite: {fileID: -7229229579313703851, guid: e3085c7cecf932c458f08d9e549c40f6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7229229579313703851, guid: e3085c7cecf932c458f08d9e549c40f6, type: 3}
+    - m_Name: 1
+      m_Hash: 64810935
+      m_Sprite: {fileID: 1940279248, guid: e3085c7cecf932c458f08d9e549c40f6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1940279248, guid: e3085c7cecf932c458f08d9e549c40f6, type: 3}
+    - m_Name: 2
+      m_Hash: 450215437
+      m_Sprite: {fileID: -728314771, guid: e3085c7cecf932c458f08d9e549c40f6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -728314771, guid: e3085c7cecf932c458f08d9e549c40f6, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 3
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 638986816913216881
+  m_ModificationHash: 638987532805338467
   m_Version: 1
