@@ -360,7 +360,7 @@ Transform:
   m_GameObject: {fileID: 224880416}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.6508, y: -1.548, z: -0.080787875}
+  m_LocalPosition: {x: -1.89, y: -1.548, z: -0.080787875}
   m_LocalScale: {x: 0.01999996, y: 0.375, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -421,6 +421,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &341097057
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 341097059}
+  - component: {fileID: 341097058}
+  m_Layer: 0
+  m_Name: HzManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &341097058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341097057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f127565a07b8d12439b68a03e1876ac4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MinHz: 3
+  MaXHz: 6.4
+--- !u!4 &341097059
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341097057}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.9255345, y: -0.3006179, z: -0.35911}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,6 +480,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -528,7 +575,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5.4
+  orthographic size: 2.1746988
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -577,6 +624,30 @@ MonoBehaviour:
   dragLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88f5cead0c0b2a4eb05b5900433f8d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 1
+  m_AssetsPPU: 83
+  m_RefResolutionX: 1920
+  m_RefResolutionY: 1080
+  m_CropFrame: 0
+  m_GridSnapping: 0
+  m_FilterMode: 0
+  m_UpscaleRT: 0
+  m_PixelSnapping: 0
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0
 --- !u!1 &574839591
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,6 +657,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 574839594}
+  - component: {fileID: 574839596}
   - component: {fileID: 574839593}
   - component: {fileID: 574839592}
   - component: {fileID: 574839595}
@@ -742,6 +814,24 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 6.31101, y: 3.3410792}
   m_EdgeRadius: 0
+--- !u!114 &574839596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574839591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74fd62c309995ac40b87116b3757e881, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tuner: {fileID: 224880417}
+  Tunerp: 0.12
+  hz: 3
+  minHz: 3
+  maxHz: 6.4
+  curClip: {fileID: 0}
 --- !u!1 &635787629
 GameObject:
   m_ObjectHideFlags: 0
@@ -1427,6 +1517,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1461893973}
+  - component: {fileID: 1461893975}
   - component: {fileID: 1461893974}
   m_Layer: 3
   m_Name: ButLeft
@@ -1486,6 +1577,33 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.002228953, y: 0.0022289003}
   m_Radius: 0.4687958
+--- !u!114 &1461893975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461893972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad39d226e08a9a4381a3f421a3ec4d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 574839596}
+        m_TargetAssemblyTypeName: Radio, Assembly-CSharp
+        m_MethodName: ChangeHz
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: -1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1707491162
 GameObject:
   m_ObjectHideFlags: 0
@@ -1495,6 +1613,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1707491163}
+  - component: {fileID: 1707491165}
   - component: {fileID: 1707491164}
   m_Layer: 3
   m_Name: ButRight
@@ -1554,6 +1673,33 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: -0.020183759}
   m_Radius: 0.4798162
+--- !u!114 &1707491165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707491162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad39d226e08a9a4381a3f421a3ec4d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 574839596}
+        m_TargetAssemblyTypeName: Radio, Assembly-CSharp
+        m_MethodName: ChangeHz
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1805820334
 GameObject:
   m_ObjectHideFlags: 0
@@ -1642,3 +1788,4 @@ SceneRoots:
   - {fileID: 635787632}
   - {fileID: 669675031}
   - {fileID: 34538392}
+  - {fileID: 341097059}
