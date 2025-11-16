@@ -13,6 +13,9 @@ public class Radio : MonoBehaviour
 
     public AudioClip curClip;
 
+    public Transform[] Tunerps;
+    public int curTunerps;
+
     private void Awake()
     {
         HM = FindFirstObjectByType<HzManager>();
@@ -38,7 +41,9 @@ public class Radio : MonoBehaviour
 
     private void AddTuner(int p = 1)
     {
-        tuner.position = new Vector3(tuner.position.x + (Tunerp * p), tuner.position.y, tuner.position.z);
+        curTunerps += p;
+        curTunerps = Mathf.Clamp(curTunerps,0, Tunerps.Length);
+        tuner.position = Tunerps[curTunerps].position;
     }
 
     private void Listen()
