@@ -2,21 +2,29 @@ using UnityEngine;
 
 public class MorseCooder : MonoBehaviour
 {
+    [Header("--------Components--------")]
+    public AudioSource audioSource;                                          
+                                          
+    [Header("------------Code----------")]
+    public string Code = "";
 
-
+    [Header("----User Input Confing----")]
     private float durButton;
-    [SerializeField] private float longThreshold = 0.5f;
+    [SerializeField] private float longThreshold = 0.4f;
 
     private float durWait;
     [SerializeField] private float BigSpaceThre = 1f;
-    [SerializeField]private float doneThre = 5f;
+    [SerializeField] private float doneThre = 5f;
     
 
     private bool isPressing;
-    
 
 
-    public string Code = "";
+    [Header("----Duration Of Spaces----")]
+    public float shortDur = 0.1f;
+    public float longDur = 0.3f;
+    public float spaceDur = 0.05f;
+
 
 
     private void Update()
@@ -71,18 +79,29 @@ public class MorseCooder : MonoBehaviour
 
     private void Space()
     {
-        Code += "2";
+        Code += "222";
+        
     }
 
 
     private void Short()
     {
         Code += "0";
+        PlayAudio(shortDur);
+        
     }
 
     private void Long()
     {
         Code += "1";
+        PlayAudio(longDur);
+    }
+
+
+    private void PlayAudio(float Dur)
+    {
+        audioSource.PlayOneShot(MorseAudioGenerator.GenerateTone(Dur));
+
     }
 
 }
